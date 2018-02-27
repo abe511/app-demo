@@ -5,7 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>map</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <link rel="stylesheet" type="text/css" media="screen" href="./css/style.css" />
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css"> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <!-- <link rel="stylesheet" href="../test/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" media="screen" href="./css/style.css" />
 </head>
 <body>
     <div id="map"></div> 
@@ -14,9 +18,9 @@
 
     <div class="search-bar-wrap">
         <div class="search-bar">
-            <a href="#search-settings" draggable="false"><i class="fas fa-sliders-h"></i></a>
+            <a href="#search-settings" draggable="false"><i class="fa fa-sliders icon-shadow"></i></a>
             <input type="search" id="search" size="1px" placeholder="Search.."/>
-            <a href="#search" draggable="false"><i class="fas fa-search"></i></a>
+            <a href="#search" draggable="false"><i class="fa fa-search icon-shadow"></i></a>
         </div>
     </div>
 
@@ -62,11 +66,11 @@
 
     <nav class="navbar-wrap">
         <div class="navbar">
-            <a href="#home" draggable="false"><i class="fas fa-home"></i></a>
-            <a href="#messages" draggable="false"><i class="fas fa-comments"></i></a>
-            <a href="#events" draggable="false"><i class="fas fa-plus"></i></a>
-            <a href="#friends" draggable="false"><i class="fas fa-users"></i></a>
-            <a href="#settings" draggable="false"><i class="fas fa-cog" ></i></a>
+            <a href="#home" draggable="false"><i class="fa fa-home icon-shadow" aria-hidden="true"></i></a>
+            <a href="#messages" draggable="false"><i class="fa fa-comments icon-shadow" aria-hidden="true"></i></a>
+            <a href="#events" draggable="false"><i class="fa fa-plus icon-shadow" aria-hidden="true"></i></a>
+            <a href="#friends" draggable="false"><i class="fa fa-users icon-shadow" aria-hidden="true"></i></a>
+            <a href="#settings" draggable="false"><i class="fa fa-cog icon-shadow" aria-hidden="true"></i></a>
         </div>
     </nav>
     
@@ -78,7 +82,8 @@
                 <span id="lngCoord"></span>
         </div>
     </div> -->
-    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    
+    <!-- <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script> -->
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDOBjRgrprujvC7ymfu2jiWM6fFtu6cXxk&library=drawing,geometry&callback=initMap">
     </script>
