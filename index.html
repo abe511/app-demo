@@ -6,25 +6,74 @@
     <title>map</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" media="screen" href="./css/style.css" />
+    <!-- <link rel="stylesheet" href="./css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="./css/style.css" />
+
 </head>
 <body>
+
     <div id="map"></div> 
     
-<!-- ********* TOP SEARCH BAR ********* -->
+    <div class="container">
+            <header class="header">
+                    <div class="wrapper">
+                        <div class="header-wrapper" id="header-wrapper">
+                            <button class="profile button" id="profile-button"><i class="fa fa-user icon-shadow"></i></button>
+                            <div class="header-title" id="header-title">
+                                <p class="animate-header">
+                                        531-501 N Catalina Ave, Redondo Beach, CA 90277
+                                </p>
+                            </div>
+                        </div>
+                        <!--        SEARCH BAR      -->
+                        <div class="search-bar">
+                            <button class="search-close button button-hide" id="search-close"><i class="fa fa-arrow-left icon-shadow" draggable="false"></i></button>
+                            <form class="search-form" id="search-form" action="" method="get">
+                                <div class="search-input-wrapper wrapper-hide" id="search-input-wrapper">
+                                    <input class="search-input form-text input-field-border" id="search-input" type="text" role="combobox" placeholder="Search.."
+                                    autocomplete="off" spellcheck="false" dir="ltr">
+                                </div>
+                                <button class="search-clear button button-hide" id="search-clear"><i class="fa fa-times icon-shadow"></i></button>
+                                <button class="search-button button" id="search-button" role="button"><i class="fa fa-search icon-shadow"></i></button>
+                            </form>
+                        </div>
+                        <div class="settings">
+                            <button class="search-settings button button-hide" id="search-settings"><i class="fa fa-sliders icon-shadow"></i></button>
+                            <button class="main-settings button" id="main-settings"><i class="fa fa-gear icon-shadow"></i></button>
+                        </div> 
+                    </div>
+                </header>
 
-    <div class="search-bar-wrap">
-        <div class="search-bar">
-            <a href="#search-settings" draggable="false"><i class="fa fa-sliders icon-shadow"></i></a>
-            <input type="search" id="search" size="1px" placeholder="Search.."/>
-            <a href="#search" draggable="false"><i class="fa fa-search icon-shadow"></i></a>
+            <div class="top-bar">top bar</div>
+
+            <aside class="sidebar">sidebar</aside>
+
+            <article class="content">main content</article>
+            
+            <aside class="ad">ad</aside>
+            
+            <nav class="nav">
+
+                <!-- ********* BOTTOM NAVIGATION BAR ********* -->
+                
+                <div class="navbar">
+                    <ul>
+                        <li><a href="#home" draggable="false"><i class="fa fa-home icon-shadow" aria-hidden="true"></i></a></li>
+                        <li><a href="#messages" draggable="false"><i class="fa fa-comments icon-shadow" aria-hidden="true"></i></a></li>
+                        <li><a href="#events" draggable="false"><i class="fa fa-plus icon-shadow" aria-hidden="true"></i></a></li>
+                        <li><a href="#friends" draggable="false"><i class="fa fa-users icon-shadow" aria-hidden="true"></i></a></li>
+                        <li><a href="#settings" draggable="false"><i class="fa fa-cog icon-shadow" aria-hidden="true"></i></a></li>
+                    </ul>
+                </div>
+            </nav>
+            <footer class="footer">footer</footer>
+            <!-- <div class="content active">NEW PAGE</div> -->
         </div>
-    </div>
 
 <!-- ********* VIEWS ********* -->
 
     <main>
-        <div class="view active" id="search-settings">
+        <div class="view active" id="search-settings-page">
             <div class="view-header-wrap">
                 <a href="#" data-target="#map" class="back"><i class="fas fa-arrow-left"></i></a>
                 <h1>Search Settings</h1>
@@ -37,45 +86,36 @@
                 <h1>Search Results</h1>
                 <a href="#" data-target="#map" class="back">Back</a>
         </div>  
-        <div class="view" id="home">
+        <div class="view" id="home-page">
                 <h1>Home</h1>
                 <a href="#" data-target="#map" class="back">Back</a>
         </div>
-        <div class="view" id="messages">
+        <div class="view" id="messages-page">
                 <h1>Messages</h1>
                 <a href="#" data-target="#map" class="back">Back</a>
         </div>
-        <div class="view" id="friends">
-                <h1>Friends</h1>
+        <div class="view" id="friends-page">
+                <h1>Friends</h1>ap.js"></script>
                 <a href="#" data-target="#map" class="back">Back</a>
-        </div>
-        <div class="view" id="events">
+            </div>
+            <div class="view" id="events-page">
                 <h1>Events</h1>
                 <a href="#" data-target="#map" class="back">Back</a>
-        </div>
-        <div class="view" id="settings">
+            </div>
+            <div class="view" id="settings-page">
                 <h1>Settings</h1>
                 <a href="#" data-target="#map" class="back">Back</a>
-        </div>                                             
-    </main>
-
-<!-- ********* BOTTOM NAVIGATION BAR ********* -->
-
-    <nav class="navbar-wrap">
-        <div class="navbar">
-            <a href="#home" draggable="false"><i class="fa fa-home icon-shadow" aria-hidden="true"></i></a>
-            <a href="#messages" draggable="false"><i class="fa fa-comments icon-shadow" aria-hidden="true"></i></a>
-            <a href="#events" draggable="false"><i class="fa fa-plus icon-shadow" aria-hidden="true"></i></a>
-            <a href="#friends" draggable="false"><i class="fa fa-users icon-shadow" aria-hidden="true"></i></a>
-            <a href="#settings" draggable="false"><i class="fa fa-cog icon-shadow" aria-hidden="true"></i></a>
-        </div>
-    </nav>
-
+            </div>                                             
+        </main>
+        
+        
+        
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDOBjRgrprujvC7ymfu2jiWM6fFtu6cXxk&library=drawing,geometry&callback=initMap">
     </script>
     <script src="./scripts/map.js"></script>
     <script src="./scripts/mapstyle.js"></script>
+    <script src="./scripts/app.js"></script>
     
 </body>
 </html>
