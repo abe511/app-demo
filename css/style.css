@@ -21,15 +21,10 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    background-color: rgb(255, 255, 255); 
+    /* background-color: rgba(255, 255, 255, 0);  */
 }
 
-html {
-    width: 100vw;
-    height: 100vh;
-}
-
-body {
+html, body {
     width: 100vw;
     height: 100vh;
 }
@@ -37,10 +32,11 @@ body {
 
 /*      DEFAULT LAYOUT (small screen)     */
 
-.container {
+#container {
     width: 100vw;
     height: 100vh;
     display: grid;
+    background-color: rgba(255, 255, 255, 0);
     grid-template-columns: [col-start] auto [col-ad] auto [col-side] auto [col-end];
     grid-template-rows: [row-start] 2rem [row-header] max-content [row-top] 1fr [row-footer] max-content [row-nav] 2rem [row-end] ;
 }
@@ -48,52 +44,61 @@ body {
 
 /*      SECTIONS        */
 
-.header {
+#map {
+    grid-column: col-start / col-end;
+    grid-row: row-start / row-end;
+    z-index: 1;
+}
+
+#header {
     background-color: rgb(160, 105, 105);
     grid-column: col-start / col-end;
     grid-row: row-start / row-header;
-    height: 100%;
+    /* height: 100%; */
+    z-index: 1;
 }
 
-.top-bar {
+#top-bar {
     background-color: rgba(187, 189, 100, 0.5);
     grid-column: col-start / col-end;
     grid-row: row-header / row-top;
     z-index: 1;
 }
 
-.sidebar {
+#sidebar {
     background-color: rgba(130, 168, 112, 0.3);
     grid-column: col-start / col-side;
     grid-row: row-header / row-nav;
     z-index: 1;
 }
 
-.content {
-    background-color: rgb(132, 156, 179);
+#content {
+    background-color: rgba(132, 156, 179, 0.5);
     grid-column: col-start / col-end;
     grid-row: row-header / row-nav;
+    z-index: 1;
 }
 
-.ad {
+#ads {
     background-color: rgba(149, 82, 158, 0.3);
     grid-column: col-end / col-ad;
     grid-row: row-header / row-nav;
     z-index: 1;
 }
 
-.footer {
+#footer {
     background-color: rgba(196, 175, 54, 0.5);
     grid-column: col-start / col-end;
     grid-row: row-footer / row-nav;
     z-index: 1;
-    margin: 0;
+    /* margin: 0; */
 }
 
-.nav {
-    background-color: rgb(103, 189, 23);
+#nav {
+    background-color: rgb(101, 158, 47);
     grid-column: col-start / col-end;
     grid-row: row-nav /row-end;
+    z-index: 1;
 }
 
 /*      ITEMS       */
@@ -160,6 +165,9 @@ body {
             animation: header-animation 8s linear 0ms infinite normal;
         } */
 
+
+/*      SEARCH BAR      */
+
 .search-bar {                            /* LEVEL 1 */
     display: flex;
     flex-grow: 1;
@@ -211,7 +219,7 @@ body {
 }
 
 
-/* HELPER CLASSES */
+/*      HELPER CLASSES      */
 
 .wrapper-hide{
     width: 0;
@@ -256,7 +264,6 @@ body {
 }
 
 
-
 /* .profile a {
     font-size: 2rem;
     color: grey;
@@ -264,17 +271,47 @@ body {
     background-color: rgb(196, 6, 6);
 } */
 
-.nav ul{
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    padding: 0;
-    margin: 5px;
+
+/*      NAVIGATION BAR      */
+
+#navbar {
+    display: flex;
+    /* justify-content: space-around; */
+    /* height: 100%; */
+    flex-basis: 100%;
+    /* flex: 1; */
+    /* justify-content: space-evenly; */
+}
+#navbar ul{
+    display: flex;
+    list-style: none;
+    height: 100%;
+    flex: 1;
+    flex-basis: auto;
     background-color: rgb(99, 137, 172);
+    justify-content: space-around;
+    /* justify-content: safe; */
+    /* justify-content: stretch; */
+    /* justify-content: space-evenly; */
 }
 
-.nav ul li {
-    display: block;
-    background-color: rgb(107, 44, 88);
+#navbar ul li {
+    text-align: center;
+    line-height: 2rem;
+    flex-basis: 100%;
+    background-color: rgb(206, 78, 167);
+}
+
+#navbar ul li a{
+    background-color: rgb(78, 206, 89);
+}
+
+#navbar ul li:hover {
+    background-color: rgb(191, 81, 206);
+}
+
+#navbar ul li:active {
+    background-color: rgb(174, 247, 186);
 }
 
 .active {
@@ -287,12 +324,12 @@ body {
 
 /*      PHONES       */
 
-@media (min-width:320px) and (max-width:600px) {
-    .container {
+@media (min-width:320px) {
+    #container {
         width: 100vw;
         height: 100vh;
         display: grid;
-        grid-template-columns: [col-start] auto [col-ad] auto [col-side] auto [col-end];
+        grid-template-columns: [col-start] 1fr [col-ad] 0 [col-side] 1fr [col-end];
         grid-template-rows: [row-start] 2rem [row-header] max-content [row-top] 1fr [row-footer] max-content [row-nav] 2rem [row-end] ;
     }
 }
@@ -300,28 +337,28 @@ body {
 
 /*      SMALL TABLET     */
 
-@media (min-width:601px) and (max-width:768px) {
-    .container {
+@media (min-width:600px) {
+    #container {
         width: 100vw;
         height: 100vh;
         display: grid;
-        grid-template-columns: [col-start] auto [col-side] auto [col-ad] auto [col-end];
+        grid-template-columns: [col-start] 1fr [col-side] 1fr [col-ad] 1fr [col-end];
         grid-template-rows: [row-start] 2rem [row-header] max-content [row-top] 1fr [row-footer] max-content [row-nav] 2rem [row-end] ;    
     }
 }
 
 /*      TABLET     */
 
-@media (min-width:769px) and (max-width:959px) {
-    .container {
+@media (min-width:768px) {
+    #container {
         width: 100vw;
         height: 100vh;
         display: grid;
-        grid-template-columns: [col-start] auto [col-side] 70% [col-ad] auto [col-end];
+        grid-template-columns: [col-start] 1fr [col-side] 70% [col-ad] 1fr [col-end];
         grid-template-rows: [row-start] 2rem [row-header] max-content [row-top] 1fr [row-footer] max-content [row-nav] 2rem [row-end] ;    
     }
     
-    .header, .top-bar, .content, .footer, .nav {
+    #header, #top-bar, #content, #footer, #nav {
         grid-column: col-side / col-ad;
     }
 }
@@ -330,23 +367,23 @@ body {
 /*      DESKTOP      */
 
 @media (min-width:960px){
-    .container {
+    #container {
         width: 100vw;
         height: 100vh;
         display: grid;
-        grid-template-columns: [col-start] auto [col-side-start] auto [col-side-end] auto [col-main-start] 60% [col-main-end] auto [col-ad-start] auto [col-ad-end] auto [col-end];
+        grid-template-columns: [col-start] auto [col-side-start] 15% [col-side-end] auto [col-main-start] 60% [col-main-end] auto [col-ad-start] 15% [col-ad-end] auto [col-end];
         grid-template-rows: [row-start] 2rem [row-header] max-content [row-top] 1fr [row-footer] max-content [row-nav] 2rem [row-end];    
     }
     
-    .header, .top-bar, .content, .footer, .nav{
+    #header, #top-bar, #content, #footer, #nav{
         grid-column: col-main-start / col-main-end;
     }
     
-    .sidebar {
+    #sidebar {
         grid-column: col-side-start / col-side-end;
     }
     
-    .ad {
+    #ads {
         grid-column: col-ad-start / col-ad-end;
     }
 }

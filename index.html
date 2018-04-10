@@ -12,10 +12,12 @@
 </head>
 <body>
 
-    <div id="map"></div> 
     
-    <div class="container">
-            <header class="header">
+    <div id="container">
+
+            <div id="map"></div> 
+            
+            <header id="header">
                     <div class="wrapper">
                         <div class="header-wrapper" id="header-wrapper">
                             <button class="profile button" id="profile-button"><i class="fa fa-user icon-shadow"></i></button>
@@ -44,29 +46,29 @@
                     </div>
                 </header>
 
-            <div class="top-bar">top bar</div>
+            <div id="top-bar">top bar</div>
 
-            <aside class="sidebar">sidebar</aside>
+            <aside id="sidebar">sidebar</aside>
 
-            <article class="content">main content</article>
+            <article id="content">main content</article>
             
-            <aside class="ad">ad</aside>
+            <aside id="ads">ads</aside>
             
-            <nav class="nav">
+            <nav id="nav">
 
                 <!-- ********* BOTTOM NAVIGATION BAR ********* -->
                 
-                <div class="navbar">
+                <div id="navbar">
                     <ul>
-                        <li><a href="#home" draggable="false"><i class="fa fa-home icon-shadow" aria-hidden="true"></i></a></li>
-                        <li><a href="#messages" draggable="false"><i class="fa fa-comments icon-shadow" aria-hidden="true"></i></a></li>
-                        <li><a href="#events" draggable="false"><i class="fa fa-plus icon-shadow" aria-hidden="true"></i></a></li>
-                        <li><a href="#friends" draggable="false"><i class="fa fa-users icon-shadow" aria-hidden="true"></i></a></li>
-                        <li><a href="#settings" draggable="false"><i class="fa fa-cog icon-shadow" aria-hidden="true"></i></a></li>
+                        <li class="button"><a href="#home" draggable="false"><i class="fa fa-home icon-shadow" aria-hidden="true"></i></a></li>
+                        <li class="button"><a href="#messages" draggable="false"><i class="fa fa-comments icon-shadow" aria-hidden="true"></i></a></li>
+                        <li class="button"><a href="#events" draggable="false"><i class="fa fa-plus icon-shadow" aria-hidden="true"></i></a></li>
+                        <li class="button"><a href="#friends" draggable="false"><i class="fa fa-users icon-shadow" aria-hidden="true"></i></a></li>
+                        <li class="button"><a href="#settings" draggable="false"><i class="fa fa-cog icon-shadow" aria-hidden="true"></i></a></li>
                     </ul>
                 </div>
             </nav>
-            <footer class="footer">footer</footer>
+            <footer id="footer">footer</footer>
             <!-- <div class="content active">NEW PAGE</div> -->
         </div>
 
@@ -111,7 +113,7 @@
         
         
     <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDOBjRgrprujvC7ymfu2jiWM6fFtu6cXxk&library=drawing,geometry&callback=initMap">
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBUiIsJnNNvqRwhcxa78JpnnLx7cwlnNNI&library=drawing,geometry&callback=initMap">
     </script>
     <script src="./scripts/map.js"></script>
     <script src="./scripts/mapstyle.js"></script>

@@ -1,10 +1,10 @@
 // API KEY
-// AIzaSyDOBjRgrprujvC7ymfu2jiWM6fFtu6cXxk
+// AIzaSyBUiIsJnNNvqRwhcxa78JpnnLx7cwlnNNI 
 
 
 var map;
-var lat = document.getElementById("latCoord");
-var lng = document.getElementById("lngCoord");
+// var lat = document.getElementById("latCoord");
+// var lng = document.getElementById("lngCoord");
 
 
 function initMap() {
@@ -38,8 +38,8 @@ function initMap() {
     };
     map = new google.maps.Map(document.getElementById("map"), mapOptions);
         
-    updateCoords(map.getCenter());
-    mapEventListeners();
+    // updateCoords(map.getCenter());
+    // mapEventListeners();
 }
 
 function mapEventListeners() {
