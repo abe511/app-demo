@@ -20,7 +20,7 @@
             <header id="header">
                     <div class="wrapper">
                         <div class="header-wrapper" id="header-wrapper">
-                            <button class="profile button" id="profile-button"><i class="fa fa-user icon-shadow"></i></button>
+                            <button class="profile button" id="profile-button"><i class="fa fa-user icon-shadow" aria-hidden="true"></i></button>
                             <div class="header-title" id="header-title">
                                 <p class="animate-header">
                                         531-501 N Catalina Ave, Redondo Beach, CA 90277
@@ -29,19 +29,19 @@
                         </div>
                         <!--        SEARCH BAR      -->
                         <div class="search-bar">
-                            <button class="search-close button button-hide" id="search-close"><i class="fa fa-arrow-left icon-shadow" draggable="false"></i></button>
+                            <button class="search-close button button-hide" id="search-close"><i class="fa fa-arrow-left icon-shadow" aria-hidden="true"></i></button>
                             <form class="search-form" id="search-form" action="" method="get">
                                 <div class="search-input-wrapper wrapper-hide" id="search-input-wrapper">
                                     <input class="search-input form-text input-field-border" id="search-input" type="text" role="combobox" placeholder="Search.."
                                     autocomplete="off" spellcheck="false" dir="ltr">
                                 </div>
-                                <button class="search-clear button button-hide" id="search-clear"><i class="fa fa-times icon-shadow"></i></button>
-                                <button class="search-button button" id="search-button" role="button"><i class="fa fa-search icon-shadow"></i></button>
+                                <button class="search-clear button button-hide" id="search-clear"><i class="fa fa-times icon-shadow" aria-hidden="true"></i></button>
+                                <button class="search-button button" id="search-button" role="button"><i class="fa fa-search icon-shadow" aria-hidden="true"></i></button>
                             </form>
                         </div>
                         <div class="settings">
-                            <button class="search-settings button button-hide" id="search-settings"><i class="fa fa-sliders icon-shadow"></i></button>
-                            <button class="main-settings button" id="main-settings"><i class="fa fa-gear icon-shadow"></i></button>
+                            <button class="search-settings button button-hide" id="search-settings"><i class="fa fa-sliders icon-shadow" aria-hidden="true"></i></button>
+                            <button class="main-settings button" id="main-settings"><i class="fa fa-gear icon-shadow" aria-hidden="true"></i></button>
                         </div> 
                     </div>
                 </header>
@@ -59,13 +59,11 @@
                 <!-- ********* BOTTOM NAVIGATION BAR ********* -->
                 
                 <div id="navbar">
-                    <ul>
-                        <li class="button"><a href="#home" draggable="false"><i class="fa fa-home icon-shadow" aria-hidden="true"></i></a></li>
-                        <li class="button"><a href="#messages" draggable="false"><i class="fa fa-comments icon-shadow" aria-hidden="true"></i></a></li>
-                        <li class="button"><a href="#events" draggable="false"><i class="fa fa-plus icon-shadow" aria-hidden="true"></i></a></li>
-                        <li class="button"><a href="#friends" draggable="false"><i class="fa fa-users icon-shadow" aria-hidden="true"></i></a></li>
-                        <li class="button"><a href="#settings" draggable="false"><i class="fa fa-cog icon-shadow" aria-hidden="true"></i></a></li>
-                    </ul>
+                        <a href="#home" draggable="false"><i class="fa fa-home icon-shadow" aria-hidden="true"></i></a>
+                        <a href="#messages" draggable="false"><i class="fa fa-comments icon-shadow" aria-hidden="true"></i></a>
+                        <a href="#events" draggable="false"><i class="fa fa-plus icon-shadow" aria-hidden="true"></i></a>
+                        <a href="#friends" draggable="false"><i class="fa fa-users icon-shadow" aria-hidden="true"></i></a>
+                        <a href="#map" draggable="false"><i class="fa fa-map icon-shadow" aria-hidden="true"></i></a>
                 </div>
             </nav>
             <footer id="footer">footer</footer>

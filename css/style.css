@@ -118,9 +118,18 @@ html, body {
     outline: none;
     color: #555;
     font-size: 1rem;
-    background-color: rgba(255, 255, 255, 0);
+    background-color: rgb(255, 255, 255);
     border: none;
 }
+
+.button:hover, #navbar a:hover {
+    color: #aaa;
+}
+
+.button:active, #navbar a:active {
+    color: #333;
+}
+
 
 .header-wrapper {                       /* LEVEL 1 */
     display: flex;
@@ -276,46 +285,20 @@ html, body {
 
 #navbar {
     display: flex;
-    /* justify-content: space-around; */
-    /* height: 100%; */
-    flex-basis: 100%;
-    /* flex: 1; */
-    /* justify-content: space-evenly; */
-}
-#navbar ul{
-    display: flex;
-    list-style: none;
     height: 100%;
-    flex: 1;
-    flex-basis: auto;
-    background-color: rgb(99, 137, 172);
-    justify-content: space-around;
-    /* justify-content: safe; */
-    /* justify-content: stretch; */
-    /* justify-content: space-evenly; */
 }
 
-#navbar ul li {
+#navbar a {
+    flex-basis: 100%;
     text-align: center;
     line-height: 2rem;
-    flex-basis: 100%;
-    background-color: rgb(206, 78, 167);
-}
-
-#navbar ul li a{
-    background-color: rgb(78, 206, 89);
-}
-
-#navbar ul li:hover {
-    background-color: rgb(191, 81, 206);
-}
-
-#navbar ul li:active {
-    background-color: rgb(174, 247, 186);
+    font-size: 1rem;
+    color: #555;
+    background-color: rgb(255, 255, 255);
 }
 
 .active {
-    z-index: 1;;
+    z-index: 1;
 }
 
 .view {

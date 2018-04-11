@@ -104,3 +104,4 @@ function closeSearchInputField(event) {
     searchInputField.blur();
 }
 
+// TODO: swipe interaction
