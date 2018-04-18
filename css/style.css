@@ -2,7 +2,10 @@
 /*      GLOBAL VARIABLES*/
 
 :root {
-    --button-bg-color: rgba(255, 255, 255, 0.9);
+    --main-bg-color: rgb(255, 255, 255);
+    --main-height-rem: 2rem;
+
+    /* --button-bg-color: rgba(255, 255, 255, 0.9);
     --button-border-color: #888;
     --button-box-shadow-color: rgba(0, 0, 0, 0.5);
     --button-hover-bg-color: rgba(235, 235, 235, 0.8);
@@ -14,7 +17,7 @@
     --icon-hover-border-color: rgba(175, 175, 175, 0.8);
     --icon-hover-bg-color: rgba(145, 145, 145, 0.8);
     --icon-active-border-color: rgba(255, 255, 255, 0.5);
-    --icon-active-bg-color: rgba(150, 150, 150, 0.5);
+    --icon-active-bg-color: rgba(150, 150, 150, 0.5); */
 }
 
 *{
@@ -38,7 +41,7 @@ html, body {
     display: grid;
     background-color: rgba(255, 255, 255, 0);
     grid-template-columns: [col-start] auto [col-ad] auto [col-side] auto [col-end];
-    grid-template-rows: [row-start] 2rem [row-header] max-content [row-top] 1fr [row-footer] max-content [row-nav] 2rem [row-end] ;
+    grid-template-rows: [row-start] var(--main-height-rem) [row-header] max-content [row-top] 1fr [row-footer] max-content [row-nav] var(--main-height-rem) [row-end] ;
 }
 
 
@@ -104,21 +107,21 @@ html, body {
 /*      ITEMS       */
 
 .wrapper {                                  /* LEVEL 0 */
-    background-color: rgb(255, 255, 255);
+    background-color: var(--main-bg-color);
     display: flex;
     justify-content: flex-end;
     flex-basis: 1;
-    height: 2rem;
+    height: var(--main-height-rem);
 }
 
 .button {
-    width: 2rem;
+    width: var(--main-height-rem);
     height: 100%;
     cursor: pointer;
     outline: none;
     color: #555;
     font-size: 1rem;
-    background-color: rgb(255, 255, 255);
+    background-color: var(--main-bg-color);
     border: none;
 }
 
@@ -134,19 +137,19 @@ html, body {
 .header-wrapper {                       /* LEVEL 1 */
     display: flex;
     width: 100%;
-    background-color: rgb(255, 255, 255);
+    background-color: var(--main-bg-color);
 }
 
     .header-title {
         display: flex;
-        background-color: rgb(255, 255, 255);
+        background-color: var(--main-bg-color);
         margin: auto;
         /* padding: 0 1rem; */
-        border-left: 1rem solid white;
-        border-right: 1rem solid white;
+        border-left: 1rem solid var(--main-bg-color);
+        border-right: 1rem solid var(--main-bg-color);
         flex-grow: 1;
         text-align: center;
-        line-height: 2rem;
+        line-height: var(--main-height-rem);
         /* flex: 1; */
         width: 1px;
         overflow: hidden;
@@ -180,30 +183,30 @@ html, body {
 .search-bar {                            /* LEVEL 1 */
     display: flex;
     flex-grow: 1;
-    background-color: rgb(255, 255, 255);
+    background-color: var(--main-bg-color);
 }
 
     .search-form {
         display: flex;
-        background-color: rgb(255, 255, 255);
+        background-color: var(--main-bg-color);
         flex-grow: 1;
     }
 
         .search-input-wrapper {
         display: flex;
         flex-grow: 1;
-        background-color: rgb(255, 255, 255);
+        background-color: var(--main-bg-color);
         }
 
             .search-input {
                 outline: none;
-                background-color: rgb(255, 255, 255);
-                margin: 0.2rem 2rem 0.2rem 2rem;
+                background-color: var(--main-bg-color);
+                margin: 0.2rem var(--main-height-rem) 0.2rem var(--main-height-rem);
                 width: 100%;
             }
 
             .search-input-margin {
-                margin: 0.2rem auto 0.2rem 2rem;
+                margin: 0.2rem auto 0.2rem var(--main-height-rem);
             }
 
 
@@ -274,7 +277,7 @@ html, body {
 
 
 /* .profile a {
-    font-size: 2rem;
+    font-size: var(--main-height-rem);
     color: grey;
     text-align: center;
     background-color: rgb(196, 6, 6);
@@ -291,10 +294,10 @@ html, body {
 #navbar a {
     flex-basis: 100%;
     text-align: center;
-    line-height: 2rem;
+    line-height: var(--main-height-rem);
     font-size: 1rem;
     color: #555;
-    background-color: rgb(255, 255, 255);
+    background-color: var(--main-bg-color);
 }
 
 .active {
@@ -309,11 +312,8 @@ html, body {
 
 @media (min-width:320px) {
     #container {
-        width: 100vw;
-        height: 100vh;
-        display: grid;
         grid-template-columns: [col-start] 1fr [col-ad] 0 [col-side] 1fr [col-end];
-        grid-template-rows: [row-start] 2rem [row-header] max-content [row-top] 1fr [row-footer] max-content [row-nav] 2rem [row-end] ;
+        grid-template-rows: [row-start] var(--main-height-rem) [row-header] max-content [row-top] 1fr [row-footer] max-content [row-nav] var(--main-height-rem) [row-end] ;
     }
 }
 
@@ -322,11 +322,8 @@ html, body {
 
 @media (min-width:600px) {
     #container {
-        width: 100vw;
-        height: 100vh;
-        display: grid;
         grid-template-columns: [col-start] 1fr [col-side] 1fr [col-ad] 1fr [col-end];
-        grid-template-rows: [row-start] 2rem [row-header] max-content [row-top] 1fr [row-footer] max-content [row-nav] 2rem [row-end] ;    
+        grid-template-rows: [row-start] var(--main-height-rem) [row-header] max-content [row-top] 1fr [row-footer] max-content [row-nav] var(--main-height-rem) [row-end] ;    
     }
 }
 
@@ -334,11 +331,8 @@ html, body {
 
 @media (min-width:768px) {
     #container {
-        width: 100vw;
-        height: 100vh;
-        display: grid;
         grid-template-columns: [col-start] 1fr [col-side] 70% [col-ad] 1fr [col-end];
-        grid-template-rows: [row-start] 2rem [row-header] max-content [row-top] 1fr [row-footer] max-content [row-nav] 2rem [row-end] ;    
+        grid-template-rows: [row-start] var(--main-height-rem) [row-header] max-content [row-top] 1fr [row-footer] max-content [row-nav] var(--main-height-rem) [row-end] ;    
     }
     
     #header, #top-bar, #content, #footer, #nav {
@@ -351,11 +345,8 @@ html, body {
 
 @media (min-width:960px){
     #container {
-        width: 100vw;
-        height: 100vh;
-        display: grid;
         grid-template-columns: [col-start] auto [col-side-start] 15% [col-side-end] auto [col-main-start] 60% [col-main-end] auto [col-ad-start] 15% [col-ad-end] auto [col-end];
-        grid-template-rows: [row-start] 2rem [row-header] max-content [row-top] 1fr [row-footer] max-content [row-nav] 2rem [row-end];    
+        grid-template-rows: [row-start] var(--main-height-rem) [row-header] max-content [row-top] 1fr [row-footer] max-content [row-nav] var(--main-height-rem) [row-end];    
     }
     
     #header, #top-bar, #content, #footer, #nav{
@@ -370,3 +361,7 @@ html, body {
         grid-column: col-ad-start / col-ad-end;
     }
 }
+
+
+/* TODO:    navbar animated top border for active button */
+/* TODO:    themeing (day and night themes)*/
