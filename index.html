@@ -30,13 +30,13 @@
                         <!--        SEARCH BAR      -->
                         <div class="search-bar">
                             <button class="search-close button button-hide" id="search-close"><i class="fa fa-arrow-left icon-shadow" aria-hidden="true"></i></button>
-                            <form class="search-form" id="search-form" action="" method="get">
+                            <form class="search-form" id="search-form" role="search" action="" method="get">
                                 <div class="search-input-wrapper wrapper-hide" id="search-input-wrapper">
-                                    <input class="search-input form-text input-field-border" id="search-input" type="text" role="combobox" placeholder="Search.."
-                                    autocomplete="off" spellcheck="false" dir="ltr">
+                                    <input class="search-input form-text input-field-border" id="search-input" type="search" name="q" placeholder="Search.."
+                                    autocomplete="on" spellcheck="false" dir="ltr" aria-label="Search by name or hashtag">
                                 </div>
-                                <button class="search-clear button button-hide" id="search-clear"><i class="fa fa-times icon-shadow" aria-hidden="true"></i></button>
-                                <button class="search-button button" id="search-button" role="button"><i class="fa fa-search icon-shadow" aria-hidden="true"></i></button>
+                                <button class="search-clear button button-hide" id="search-clear" type="reset"><i class="fa fa-times icon-shadow" aria-hidden="true"></i></button>
+                                <button class="search-button button" id="search-button" role="button" type="submit"><i class="fa fa-search icon-shadow" aria-hidden="true"></i></button>
                             </form>
                         </div>
                         <div class="settings">
@@ -55,16 +55,21 @@
             <aside id="ads">ads</aside>
             
             <nav id="nav">
-
-                <!-- ********* BOTTOM NAVIGATION BAR ********* -->
                 
-                <div id="navbar">
-                        <a href="#home" draggable="false"><i class="fa fa-home icon-shadow" aria-hidden="true"></i></a>
-                        <a href="#messages" draggable="false"><i class="fa fa-comments icon-shadow" aria-hidden="true"></i></a>
-                        <a href="#events" draggable="false"><i class="fa fa-plus icon-shadow" aria-hidden="true"></i></a>
-                        <a href="#friends" draggable="false"><i class="fa fa-users icon-shadow" aria-hidden="true"></i></a>
-                        <a href="#map" draggable="false"><i class="fa fa-map icon-shadow" aria-hidden="true"></i></a>
-                </div>
+                <!-- <div id="navbar-switch" >
+                    <div id="navbar-active"></div>
+                </div> -->
+
+                    <!-- ********* BOTTOM NAVIGATION BAR ********* -->
+                    
+                    <hr id="navbar-slider"/>
+                    <div id="navbar">
+                        <a href="#home" id="home-button" data-index = "0" draggable="false"><i class="fa fa-home icon-shadow" aria-hidden="true"></i></a>
+                        <a href="#messages" id="messages-button" data-index = "1" draggable="false"><i class="fa fa-comments icon-shadow" aria-hidden="true"></i></a>
+                        <a href="#events" id="events-button" data-index = "2" draggable="false"><i class="fa fa-plus icon-shadow" aria-hidden="true"></i></a>
+                        <a href="#friends" id="friends-button" data-index = "3" draggable="false"><i class="fa fa-users icon-shadow" aria-hidden="true"></i></a>
+                        <a href="#map" id="map-button" data-index = "4" draggable="false"><i class="fa fa-map icon-shadow" aria-hidden="true"></i></a>
+                    </div>
             </nav>
             <footer id="footer">footer</footer>
             <!-- <div class="content active">NEW PAGE</div> -->

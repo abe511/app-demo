@@ -1,0 +1,88 @@
+@import "partials/resets";
+@import "partials/variables";
+@import "partials/mixins/export";
+@import "partials/components/export";
+@import "partials/layouts/export";
+@import "partials/helpers/export";
+
+
+/*      DEFAULT LAYOUT (small screen)     */
+
+$grid-template-columns: "[col-start] auto [col-ad] auto [col-side] auto [col-end]";
+$grid-template-rows: "[row-start] var(--main-height) [row-header] max-content [row-top] 1fr [row-footer] max-content [row-nav] auto [row-end]";
+
+@include mediaQuery(0px, 320px) {
+    #container {
+        grid-template-columns: #{$grid-template-columns};
+        grid-template-rows: #{$grid-template-rows};
+    }
+}
+
+/*      PHONES       */
+
+$grid-template-columns: "[col-start] 1fr [col-ad] 0 [col-side] 1fr [col-end]";
+$grid-template-rows: "[row-start] var(--main-height) [row-header] max-content [row-top] 1fr [row-footer] max-content [row-nav] auto [row-end]";
+
+@include mediaQuery(320px) {
+    #container {
+        grid-template-columns: #{$grid-template-columns};
+        grid-template-rows: #{$grid-template-rows};
+    }
+}
+
+/*      SMALL TABLET     */
+
+$grid-template-columns: "[col-start] 1fr [col-side] 1fr [col-ad] 1fr [col-end]";
+$grid-template-rows: "[row-start] var(--main-height) [row-header] max-content [row-top] 1fr [row-footer] max-content [row-nav] auto [row-end]";    
+
+@include mediaQuery(600px) {
+    #container {
+        grid-template-columns: #{$grid-template-columns};
+        grid-template-rows: #{$grid-template-rows};
+    }
+}
+
+/*      TABLET     */
+
+$grid-template-columns: "[col-start] 1fr [col-side] 70% [col-ad] 1fr [col-end]";
+$grid-template-rows: "[row-start] var(--main-height) [row-header] max-content [row-top] 1fr [row-footer] max-content [row-nav] auto [row-end]";    
+
+@include mediaQuery(768px) {
+    #container {
+        grid-template-columns: #{$grid-template-columns};
+        grid-template-rows: #{$grid-template-rows};
+    }
+    
+    #header, #top-bar, #content, #footer, #nav {
+        grid-column: col-side / col-ad;
+    }
+}
+
+
+/*      DESKTOP      */
+
+$grid-template-columns: "[col-start] auto [col-side-start] 15% [col-side-end] auto [col-main-start] 60% [col-main-end] auto [col-ad-start] 15% [col-ad-end] auto [col-end]";
+$grid-template-rows: "[row-start] var(--main-height) [row-header] max-content [row-top] 1fr [row-footer] max-content [row-nav] auto [row-end]";    
+
+@include mediaQuery(960px) {
+    #container {
+        grid-template-columns: #{$grid-template-columns};
+        grid-template-rows: #{$grid-template-rows};
+    }
+    
+    #header, #top-bar, #content, #footer, #nav{
+        grid-column: col-main-start / col-main-end;
+    }
+    
+    #sidebar {
+        grid-column: col-side-start / col-side-end;
+    }
+    
+    #ads {
+        grid-column: col-ad-start / col-ad-end;
+    }
+}
+
+
+/* TODO:    navbar animated top border for active button */
+/* TODO:    themeing (day and night themes)*/

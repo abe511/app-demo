@@ -1,0 +1,28 @@
+%flex {
+    display: flex;
+    flex-grow: 1;
+    // background-color: var(--main-bg-color);
+}
+
+.search-bar {
+    @extend %flex;
+}
+
+.search-form {
+    @extend %flex;
+}
+
+.search-input-wrapper {
+    @extend %flex;
+}
+
+.search-input {
+    outline: none;
+    background-color: var(--main-bg-color);
+    margin: 0.2rem var(--main-height) 0.2rem var(--main-height);
+    width: 100%;
+}
+
+.search-input-margin {
+    margin: 0.2rem auto 0.2rem var(--main-height);
+}

@@ -1,0 +1,65 @@
+
+#container {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+
+#map {
+    grid-column: col-start / col-end;
+    grid-row: row-start / row-end;
+    z-index: 1;
+}
+
+#header {
+    background-color: rgb(160, 105, 105);
+    grid-column: col-start / col-end;
+    grid-row: row-start / row-header;
+    /* height: 100%; */
+    z-index: 1;
+}
+
+#top-bar {
+    background-color: rgba(187, 189, 100, 0.5);
+    grid-column: col-start / col-end;
+    grid-row: row-header / row-top;
+    z-index: 1;
+}
+
+#sidebar {
+    background-color: rgba(130, 168, 112, 0.3);
+    grid-column: col-start / col-side;
+    grid-row: row-header / row-nav;
+    z-index: 1;
+}
+
+#content {
+    background-color: rgba(132, 156, 179, 0.5);
+    grid-column: col-start / col-end;
+    grid-row: row-header / row-nav;
+    z-index: 1;
+}
+
+#ads {
+    background-color: rgba(149, 82, 158, 0.3);
+    grid-column: col-end / col-ad;
+    grid-row: row-header / row-nav;
+    z-index: 1;
+}
+
+#footer {
+    background-color: rgba(196, 175, 54, 0.5);
+    grid-column: col-start / col-end;
+    grid-row: row-footer / row-nav;
+    z-index: 1;
+    /* margin: 0; */
+}
+
+#nav {
+    // background-color: rgb(101, 158, 47);
+    grid-column: col-start / col-end;
+    grid-row: row-nav /row-end;
+    z-index: 1;
+}

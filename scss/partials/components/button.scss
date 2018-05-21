@@ -1,0 +1,16 @@
+.button {
+    width: var(--main-height);
+    height: 100%;
+    cursor: pointer;
+    outline: none;
+    color: var(--button-color);
+    font-size: 1rem;
+    background-color: var(--main-bg-color);
+    border: none;
+    &:hover {
+        color: var(--button-hover-color);
+    }
+    &:active {
+        color: var(--button-active-color);
+    }
+}

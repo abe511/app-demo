@@ -1,0 +1,43 @@
+.header-wrapper {
+    display: flex;
+    background-color: var(--main-bg-color);
+    width: 100%;
+}
+
+.header-title {
+    @extend .header-wrapper;
+    // display: flex;
+    // background-color: var(--main-bg-color);
+    width: 1px;
+    margin: auto;
+    /* padding: 0 1rem; */
+    border-left: 1rem solid var(--main-bg-color);
+    border-right: 1rem solid var(--main-bg-color);
+    flex-grow: 1;
+    text-align: center;
+    line-height: var(--main-height);
+    /* flex: 1; */
+    overflow: hidden;
+    white-space: nowrap;
+    /* text-overflow: ellipsis; */
+    z-index: 0;
+}
+
+@keyframes header-animation{
+    0% {
+        transform: translateX(100%);
+    }
+    /* 50% {
+        transform: translateX(-50%);
+    } */
+    100% {
+        transform: translateX(-100%);
+    }
+    /* 100% {
+        transform: translateX(0%);
+    } */
+}
+
+/* .animate-header {
+    animation: header-animation 8s linear 0ms infinite normal;
+} */

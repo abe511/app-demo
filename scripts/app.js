@@ -15,6 +15,15 @@ const searchCloseButton = document.getElementById("search-close");
 const mainSettingsButton = document.getElementById("main-settings");
 const searchSettingsButton = document.getElementById("search-settings");
 
+//      NAV BAR VARIABLES
+
+const navbarSlider = document.querySelector("#navbar-slider");
+const homeButton = document.querySelector("#home-button");
+const messagesButton = document.querySelector("#messages-button");
+const eventsButton = document.querySelector("#events-button");
+const friendsButton = document.querySelector("#friends-button");
+const mapButton = document.querySelector("#map-button");
+
 //      SEARCH BAR EVENT LISTENERS
 
 // searchForm.addEventListener("focusout", closeSearchInputField, true);
@@ -24,6 +33,14 @@ searchInputField.addEventListener("input", showHideClearButton);
 // searchInputField.addEventListener("focuschange", closeSearchInputField, true);
 searchClearButton.addEventListener("click", clearSearchInput);
 searchCloseButton.addEventListener("click", closeSearchInputField);
+
+//      NAV BAR EVENT LISTENERS
+
+homeButton.addEventListener("click", sliderSwitch);
+messagesButton.addEventListener("click", sliderSwitch);
+eventsButton.addEventListener("click", sliderSwitch);
+friendsButton.addEventListener("click", sliderSwitch);
+mapButton.addEventListener("click", sliderSwitch);
 
 //      SEARCH BAR FUNCTIONS
 
@@ -102,6 +119,13 @@ function closeSearchInputField(event) {
     }
 
     searchInputField.blur();
+}
+
+
+// switches the slider above the navbar to active button
+
+function sliderSwitch() {
+    navbarSlider.style.marginLeft = (20 * this.dataset.index) + "%";   
 }
 
 // TODO: swipe interaction

@@ -1,0 +1,47 @@
+.wrapper-hide{
+    width: 0;
+    transition: width 100ms ease-out;
+}
+
+.button-hide {
+    display: none;
+}
+.button-show {
+    display: unset;
+}
+
+.form-text {
+    color: var(--field-font-color);
+    /* font-size: 1rem; */
+    text-align: center;
+}
+
+.input-field-border {
+    border: none;
+    border-bottom: 1px solid var(--field-underline-color);
+    transition: border-bottom 400ms ease-out;
+    &:focus {
+        border-bottom: 1px solid var(--field-underline-color-active);
+    }
+}
+
+/* .profile a {
+    font-size: var(--main-height);
+    color: grey;
+    text-align: center;
+    background-color: rgb(196, 6, 6);
+} */
+
+.active {
+    z-index: 1;
+}
+
+.view {
+    display: none;
+}
+
+
+// MAP CLEANUP
+.gm-style-cc, .gm-style iframe+div {
+    visibility: hidden;
+}
