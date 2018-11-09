@@ -1,3 +1,3 @@
-# wip
-# server-side coming soon
+discontinued
+React version in progress
 
